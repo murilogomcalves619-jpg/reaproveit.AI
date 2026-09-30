@@ -1,0 +1,648 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   CORES
+========================= */
+
+:root {
+    --green: #3f4d1f;
+    --green-dark: #344019;
+    --green-soft: #e9edd7;
+
+    --cream: #fbf9f1;
+    --cream-2: #f3f1e5;
+
+    --orange: #f47720;
+
+    --text: #28301c;
+
+    --line: #dedecf;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: var(--cream);
+
+    color: var(--text);
+
+    padding-bottom: 170px;
+}
+
+
+/* =========================
+   PÁGINA
+========================= */
+
+.pagina {
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 35px 8vw 50px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 330px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background: var(--cream);
+
+    margin-bottom: 45px;
+}
+
+
+.hero-texto {
+    position: relative;
+
+    z-index: 2;
+
+    width: 55%;
+}
+
+
+.hero h1 {
+    font-size: clamp(48px, 5vw, 76px);
+
+    line-height: 0.98;
+
+    font-weight: 800;
+
+    letter-spacing: -3px;
+
+    color: var(--green-dark);
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 span {
+    color: var(--orange);
+}
+
+
+.hero p {
+    max-width: 650px;
+
+    font-size: 19px;
+
+    line-height: 1.6;
+
+    color: #596052;
+}
+
+
+/* =========================
+   FORMA VERDE
+========================= */
+
+.hero-forma {
+    position: absolute;
+
+    right: -4%;
+
+    top: -100px;
+
+    width: 48vw;
+
+    height: 420px;
+
+    background: var(--green-soft);
+
+    border-radius: 50%;
+}
+
+
+/* =========================
+   TÍTULO DA SEÇÃO
+========================= */
+
+.secao {
+    width: 100%;
+}
+
+
+.titulo-secao {
+    display: inline-block;
+
+    padding: 14px 22px;
+
+    margin-bottom: 20px;
+
+    border-radius: 8px;
+
+    background: var(--green);
+}
+
+
+.titulo-secao h2 {
+    color: white;
+
+    font-size: 19px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.cards-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    min-height: 300px;
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    text-align: center;
+
+    background: #fffef9;
+
+    border: 1px solid var(--line);
+
+    border-radius: 14px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.card:hover {
+    transform: translateY(-6px);
+
+    border-color: #c7ccb5;
+
+    box-shadow:
+        0 15px 30px rgba(52, 64, 25, 0.12);
+}
+
+
+/* =========================
+   ESPAÇO DA IMAGEM
+========================= */
+
+.imagem-card {
+    width: 100%;
+
+    height: 135px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 16px;
+
+    overflow: hidden;
+
+    border-radius: 11px;
+
+    background: var(--green-soft);
+
+    border: 1px dashed #b8c19b;
+}
+
+
+/* =========================
+   IMAGEM
+========================= */
+
+.imagem-card img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: 10px;
+
+    display: block;
+}
+
+
+/*
+   Se a imagem for uma foto e você quiser
+   preencher todo o espaço, troque:
+
+   object-fit: contain;
+
+   por:
+
+   object-fit: cover;
+*/
+
+
+/* =========================
+   TÍTULO CARD
+========================= */
+
+.card h3 {
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: var(--text);
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   "REUTILIZE COMO"
+========================= */
+
+.card span {
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: var(--orange);
+
+    margin-bottom: 9px;
+}
+
+
+/* =========================
+   TEXTO
+========================= */
+
+.card p {
+    max-width: 240px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    color: #70756a;
+}
+
+
+/* =========================
+   BARRA FIXA
+========================= */
+
+.barra-reaproveitamento {
+    position: fixed;
+
+    z-index: 1000;
+
+    left: 50%;
+
+    bottom: 18px;
+
+    transform: translateX(-50%);
+
+    width: calc(100% - 8vw);
+
+    min-height: 130px;
+
+    padding: 13px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 10px;
+
+    background: rgba(251, 249, 241, 0.97);
+
+    border: 1px solid var(--line);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(40, 48, 28, 0.18);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* =========================
+   OPÇÕES
+========================= */
+
+.opcao {
+    min-height: 100px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    border-radius: 13px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.opcao:hover {
+    transform: translateY(-5px);
+
+    background: white;
+}
+
+
+/* =========================
+   ÍCONE
+========================= */
+
+.icone {
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 8px;
+
+    border-radius: 50%;
+
+    background: var(--green-soft);
+
+    font-size: 23px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.opcao:hover .icone {
+    background: #ffe2cf;
+
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   NOME
+========================= */
+
+.opcao strong {
+    font-size: 14px;
+
+    color: var(--green-dark);
+
+    margin-bottom: 5px;
+}
+
+
+.opcao:hover strong {
+    color: var(--orange);
+}
+
+
+/* =========================
+   DESCRIÇÃO
+========================= */
+
+.opcao span {
+    max-width: 190px;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+    color: #77796f;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+    .pagina {
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+
+
+    .cards-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .hero-texto {
+        width: 65%;
+    }
+
+
+    .barra-reaproveitamento {
+        width: calc(100% - 4vw);
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding-bottom: 110px;
+    }
+
+
+    .pagina {
+        padding: 20px 15px 30px;
+    }
+
+
+    .hero {
+        min-height: 340px;
+
+        align-items: flex-start;
+
+        padding-top: 45px;
+    }
+
+
+    .hero-texto {
+        width: 100%;
+    }
+
+
+    .hero h1 {
+        font-size: 43px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .hero p {
+        font-size: 15px;
+
+        max-width: 330px;
+    }
+
+
+    .hero-forma {
+        width: 420px;
+
+        height: 300px;
+
+        right: -220px;
+
+        top: 100px;
+    }
+
+
+    .titulo-secao {
+        padding: 12px 16px;
+    }
+
+
+    .titulo-secao h2 {
+        font-size: 15px;
+    }
+
+
+    .cards-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+
+    .card {
+        min-height: 270px;
+
+        padding: 12px;
+    }
+
+
+    .imagem-card {
+        height: 105px;
+    }
+
+
+    .card h3 {
+        font-size: 14px;
+    }
+
+
+    .card span {
+        font-size: 11px;
+    }
+
+
+    .card p {
+        font-size: 10px;
+    }
+
+
+    .barra-reaproveitamento {
+        width: calc(100% - 8px);
+
+        min-height: 72px;
+
+        bottom: 4px;
+
+        padding: 5px;
+
+        gap: 2px;
+
+        border-radius: 15px;
+    }
+
+
+    .opcao {
+        min-height: 62px;
+    }
+
+
+    .icone {
+        width: 29px;
+
+        height: 29px;
+
+        font-size: 14px;
+
+        margin-bottom: 3px;
+    }
+
+
+    .opcao strong {
+        font-size: 8px;
+    }
+
+
+    .opcao span {
+        display: none;
+    }
+}

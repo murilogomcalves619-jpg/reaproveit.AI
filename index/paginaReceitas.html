@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reaproveita.ai - Ingredientes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="/imagens/favicon_reaproveita_maximo.png?v=2">
+
+    <link rel="stylesheet" href="/css/paginaReceitas.css">
+</head>
+
+<body>
+    
+    <header class="header">
+
+        <a href="#inicio" class="brand">
+            <img src="/imagens/logoInicio.png" alt="Reaproveita">
+        </a>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+
+        <nav class="nav">
+
+            <a href="#">
+                Início
+            </a>
+
+            <a href="#" class="active">
+                 Como funciona
+            </a>
+
+            <a href="#">
+                Sobre nós
+            </a>
+
+        </nav>
+
+        <div class="botoes-login">
+            <button class="btn-topo">
+            Entrar
+            </button>
+
+            <button class="btn-topo">
+            Cadastrar
+            </button>
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         INTRO
+    ========================== -->
+
+    <section class="intro">
+
+        <div class="intro-content">
+
+            <h1>
+                O que você tem<br>
+                <span>em casa?</span>
+            </h1>
+
+            <p>
+                Escolha um ingrediente e descubra receitas
+                para aproveitar melhor os alimentos que você já tem.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTEÚDO PRINCIPAL
+    ========================== -->
+
+    <main class="main-content">
+
+
+        <!-- =========================
+             INGREDIENTES
+        ========================== -->
+
+        <section class="ingredients-area">
+
+            <div class="section-title">
+
+                <div>
+
+                    <h2>
+                        Seus ingredientes
+                    </h2>
+
+                    <p>
+                        Selecione um alimento para encontrar receitas.
+                    </p>
+
+                </div>
+
+                <span id="contador">
+                    0 alimentos
+                </span>
+
+            </div>
+
+
+            <div id="categorias">
+
+
+                <!-- =========================
+                     CEREAIS E GRÃOS
+                ========================== -->
+
+                <div class="categoria">
+
+                    <div class="categoria-header">
+
+                        <div class="categoria-icon">
+                            🌾
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Cereais e grãos
+                            </h3>
+
+                            <p>
+                                Alimentos básicos presentes no dia a dia.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ingredient-grid">
+
+                        <button class="ingredient-card" data-api="rice" data-name="Arroz">
+
+                            <div class="food-image">
+                                <span>🍚</span>
+                            </div>
+
+                            <span>
+                                Arroz
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="corn" data-name="Milho">
+
+                            <div class="food-image">
+                                <span>🌽</span>
+                            </div>
+
+                            <span>
+                                Milho
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="oats" data-name="Aveia">
+
+                            <div class="food-image">
+                                <span>🌾</span>
+                            </div>
+
+                            <span>
+                                Aveia
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     CARNES
+                ========================== -->
+
+                <div class="categoria">
+
+                    <div class="categoria-header">
+
+                        <div class="categoria-icon">
+                            🥩
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Carnes
+                            </h3>
+
+                            <p>
+                                Carnes que podem ser reaproveitadas em novas receitas.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ingredient-grid">
+
+
+                        <button class="ingredient-card" data-api="beef" data-name="Carne bovina">
+
+                            <div class="food-image">
+                                <span>🥩</span>
+                            </div>
+
+                            <span>
+                                Carne bovina
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="chicken" data-name="Frango">
+
+                            <div class="food-image">
+                                <span>🍗</span>
+                            </div>
+
+                            <span>
+                                Frango
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="pork" data-name="Carne suína">
+
+                            <div class="food-image">
+                                <span>🥩</span>
+                            </div>
+
+                            <span>
+                                Carne suína
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="fish" data-name="Peixe">
+
+                            <div class="food-image">
+                                <span>🐟</span>
+                            </div>
+
+                            <span>
+                                Peixe
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="sausage" data-name="Linguiça">
+
+                            <div class="food-image">
+                                <span>🌭</span>
+                            </div>
+
+                            <span>
+                                Linguiça
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="sausage" data-name="Salsicha">
+
+                            <div class="food-image">
+                                <span>🌭</span>
+                            </div>
+
+                            <span>
+                                Salsicha
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     LEGUMINOSAS
+                ========================== -->
+
+                <div class="categoria">
+
+                    <div class="categoria-header">
+
+                        <div class="categoria-icon">
+                            🫘
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Leguminosas
+                            </h3>
+
+                            <p>
+                                Ingredientes nutritivos para diversas preparações.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ingredient-grid">
+
+                        <button class="ingredient-card" data-api="beans" data-name="Feijão">
+
+                            <div class="food-image">
+                                <span>🫘</span>
+                            </div>
+
+                            <span>
+                                Feijão
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     FRUTAS
+                ========================== -->
+
+                <div class="categoria">
+
+                    <div class="categoria-header">
+
+                        <div class="categoria-icon">
+                            🍎
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Frutas
+                            </h3>
+
+                            <p>
+                                Frutas que podem virar sobremesas, bebidas e outras receitas.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ingredient-grid">
+
+
+                        <button class="ingredient-card" data-api="banana" data-name="Banana">
+
+                            <div class="food-image">
+                                <span>🍌</span>
+                            </div>
+
+                            <span>
+                                Banana
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="apple" data-name="Maçã">
+
+                            <div class="food-image">
+                                <span>🍎</span>
+                            </div>
+
+                            <span>
+                                Maçã
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="orange" data-name="Laranja">
+
+                            <div class="food-image">
+                                <span>🍊</span>
+                            </div>
+
+                            <span>
+                                Laranja
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="papaya" data-name="Mamão">
+
+                            <div class="food-image">
+                                <span>🥭</span>
+                            </div>
+
+                            <span>
+                                Mamão
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="watermelon" data-name="Melancia">
+
+                            <div class="food-image">
+                                <span>🍉</span>
+                            </div>
+
+                            <span>
+                                Melancia
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="pineapple" data-name="Abacaxi">
+
+                            <div class="food-image">
+                                <span>🍍</span>
+                            </div>
+
+                            <span>
+                                Abacaxi
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="mango" data-name="Manga">
+
+                            <div class="food-image">
+                                <span>🥭</span>
+                            </div>
+
+                            <span>
+                                Manga
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="strawberry" data-name="Morango">
+
+                            <div class="food-image">
+                                <span>🍓</span>
+                            </div>
+
+                            <span>
+                                Morango
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="grapes" data-name="Uva">
+
+                            <div class="food-image">
+                                <span>🍇</span>
+                            </div>
+
+                            <span>
+                                Uva
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="lime" data-name="Limão">
+
+                            <div class="food-image">
+                                <span>🍋</span>
+                            </div>
+
+                            <span>
+                                Limão
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="avocado" data-name="Abacate">
+
+                            <div class="food-image">
+                                <span>🥑</span>
+                            </div>
+
+                            <span>
+                                Abacate
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="pear" data-name="Pera">
+
+                            <div class="food-image">
+                                <span>🍐</span>
+                            </div>
+
+                            <span>
+                                Pera
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     HORTALIÇAS
+                ========================== -->
+
+                <div class="categoria">
+
+                    <div class="categoria-header">
+
+                        <div class="categoria-icon">
+                            🥬
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Hortaliças e legumes
+                            </h3>
+
+                            <p>
+                                Legumes e hortaliças para diferentes receitas.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ingredient-grid">
+
+
+                        <button class="ingredient-card" data-api="tomato" data-name="Tomate">
+
+                            <div class="food-image">
+                                <span>🍅</span>
+                            </div>
+
+                            <span>
+                                Tomate
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="potato" data-name="Batata">
+
+                            <div class="food-image">
+                                <span>🥔</span>
+                            </div>
+
+                            <span>
+                                Batata
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="onion" data-name="Cebola">
+
+                            <div class="food-image">
+                                <span>🧅</span>
+                            </div>
+
+                            <span>
+                                Cebola
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="carrot" data-name="Cenoura">
+
+                            <div class="food-image">
+                                <span>🥕</span>
+                            </div>
+
+                            <span>
+                                Cenoura
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="broccoli" data-name="Brócolis">
+
+                            <div class="food-image">
+                                <span>🥦</span>
+                            </div>
+
+                            <span>
+                                Brócolis
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="cabbage" data-name="Repolho">
+
+                            <div class="food-image">
+                                <span>🥬</span>
+                            </div>
+
+                            <span>
+                                Repolho
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="cucumber" data-name="Pepino">
+
+                            <div class="food-image">
+                                <span>🥒</span>
+                            </div>
+
+                            <span>
+                                Pepino
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="bell pepper" data-name="Pimentão">
+
+                            <div class="food-image">
+                                <span>🫑</span>
+                            </div>
+
+                            <span>
+                                Pimentão
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="pumpkin" data-name="Abóbora">
+
+                            <div class="food-image">
+                                <span>🎃</span>
+                            </div>
+
+                            <span>
+                                Abóbora
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="zucchini" data-name="Abobrinha">
+
+                            <div class="food-image">
+                                <span>🥒</span>
+                            </div>
+
+                            <span>
+                                Abobrinha
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="beetroot" data-name="Beterraba">
+
+                            <div class="food-image">
+                                <span>🫜</span>
+                            </div>
+
+                            <span>
+                                Beterraba
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="cauliflower" data-name="Couve-flor">
+
+                            <div class="food-image">
+                                <span>🥦</span>
+                            </div>
+
+                            <span>
+                                Couve-flor
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     FOLHAS
+                ========================== -->
+
+                <div class="categoria">
+
+                    <div class="categoria-header">
+
+                        <div class="categoria-icon">
+                            🌿
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Folhas e verduras
+                            </h3>
+
+                            <p>
+                                Verduras que podem ser utilizadas em receitas.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ingredient-grid">
+
+
+                        <button class="ingredient-card" data-api="kale" data-name="Couve">
+
+                            <div class="food-image">
+                                <span>🥬</span>
+                            </div>
+
+                            <span>
+                                Couve
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="spinach" data-name="Espinafre">
+
+                            <div class="food-image">
+                                <span>🌿</span>
+                            </div>
+
+                            <span>
+                                Espinafre
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     OVOS E LATICÍNIOS
+                ========================== -->
+
+                <div class="categoria">
+
+                    <div class="categoria-header">
+
+                        <div class="categoria-icon">
+                            🥛
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Ovos e laticínios
+                            </h3>
+
+                            <p>
+                                Produtos que podem ganhar uma nova receita.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ingredient-grid">
+
+
+                        <button class="ingredient-card" data-api="egg" data-name="Ovo">
+
+                            <div class="food-image">
+                                <span>🥚</span>
+                            </div>
+
+                            <span>
+                                Ovo
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="milk" data-name="Leite">
+
+                            <div class="food-image">
+                                <span>🥛</span>
+                            </div>
+
+                            <span>
+                                Leite
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="cheddar" data-name="Queijo">
+
+                            <div class="food-image">
+                                <span>🧀</span>
+                            </div>
+
+                            <span>
+                                Queijo
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="yogurt" data-name="Iogurte">
+
+                            <div class="food-image">
+                                <span>🥛</span>
+                            </div>
+
+                            <span>
+                                Iogurte
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="butter" data-name="Manteiga">
+
+                            <div class="food-image">
+                                <span>🧈</span>
+                            </div>
+
+                            <span>
+                                Manteiga
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     MASSAS E PANIFICADOS
+                ========================== -->
+
+                <div class="categoria">
+
+                    <div class="categoria-header">
+
+                        <div class="categoria-icon">
+                            🍞
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Massas e panificados
+                            </h3>
+
+                            <p>
+                                Alimentos que podem ser transformados em novas receitas.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ingredient-grid">
+
+
+                        <button class="ingredient-card" data-api="bread" data-name="Pão">
+
+                            <div class="food-image">
+                                <span>🍞</span>
+                            </div>
+
+                            <span>
+                                Pão
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="pasta" data-name="Macarrão">
+
+                            <div class="food-image">
+                                <span>🍝</span>
+                            </div>
+
+                            <span>
+                                Macarrão
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="flour" data-name="Farinha">
+
+                            <div class="food-image">
+                                <span>🌾</span>
+                            </div>
+
+                            <span>
+                                Farinha
+                            </span>
+
+                        </button>
+
+
+                        <button class="ingredient-card" data-api="biscuit" data-name="Biscoitos">
+
+                            <div class="food-image">
+                                <span>🍪</span>
+                            </div>
+
+                            <span>
+                                Biscoitos
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     FRIOS
+                ========================== -->
+
+                <div class="categoria">
+
+                    <div class="categoria-header">
+
+                        <div class="categoria-icon">
+                            🥓
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Frios
+                            </h3>
+
+                            <p>
+                                Produtos que podem ser aproveitados antes do vencimento.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ingredient-grid">
+
+                        <button class="ingredient-card" data-api="ham" data-name="Presunto">
+
+                            <div class="food-image">
+                                <span>🥓</span>
+                            </div>
+
+                            <span>
+                                Presunto
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RECEITAS
+        ========================== -->
+
+        <aside class="recipes-area" id="recipesArea">
+
+
+            <!-- PLACEHOLDER -->
+
+            <div class="recipes-placeholder" id="placeholder">
+
+                <div class="placeholder-icon">
+                    🍽️
+                </div>
+
+                <h2>
+                    Escolha um ingrediente
+                </h2>
+
+                <p>
+                    Clique em um alimento ao lado para descobrir
+                    receitas que você pode preparar com ele.
+                </p>
+
+            </div>
+
+
+            <!-- RECEITAS -->
+
+            <div class="recipes-content" id="recipesContent">
+
+
+                <div class="recipes-header">
+
+                    <div>
+
+                        <span>
+                            RECEITAS
+                        </span>
+
+                        <h2 id="selectedIngredient">
+                            Ingrediente
+                        </h2>
+
+                    </div>
+
+                    <button id="closeRecipes" aria-label="Fechar receitas">
+
+                        ×
+
+                    </button>
+
+                </div>
+
+
+                <div id="recipeList"></div>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-brand">
+
+            <img src="imagens/logoInicio.png" alt="Reaproveita.ai">
+
+        </div>
+
+        <p>
+            © 2026 Reaproveita.ai — Menos desperdício, mais possibilidades.
+        </p>
+
+        <div class="socials">
+
+            <span>
+                Instagram
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script src="/js/paginaReceitas.js"></script>
+
+</body>
+
+</html>
