@@ -1,130 +1,449 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jardinagem - Reaproveita</title>
-  <link rel="stylesheet" href="/css/reaproveitamento.css">
 
-  <link rel="icon" type="image/png" href="/imagens/favicon_reaproveita_maximo.png">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reaproveit.ai - Jardinagem</title>
+
+    <link rel="stylesheet" href="/css/paginaJardinagem.css">
+
+    <link rel="icon"
+        type="image/png"
+        href="/imagens/favicon_reaproveita_maximo.png">
 </head>
 
 <body>
 
-<main class="pagina">
+  <header class="header">
 
-  <button class="voltar" onclick="voltar()">← Voltar</button>
+    <a href="paginaInicial.html" class="brand">
+        <img src="/imagens/logoInicio.png" alt="Reaproveit.ai">
+    </a>
 
-  <section class="topo">
+    <nav class="nav">
 
-    <div>
-      <h1>Jardinagem</h1>
+        <a href="paginaInicial.html">Início</a>
 
-      <h2>Mais vida para suas plantas</h2>
+        <a href="paginaInicial.html#como-funciona">
+            Como funciona
+        </a>
 
-      <p>
-        Os resíduos orgânicos podem ser grandes aliados no cuidado
-        com o seu jardim. Eles viram adubo, protegem o solo e ajudam
-        no crescimento das plantas.
-      </p>
-    </div>
+        <a href="paginaInicial.html#sobre">
+            Sobre nós
+        </a>
 
-    <div class="imagem">
-      <img src="imagens/jardinagem.png" alt="Jardinagem">
-    </div>
+        <div class="botoes-lixo">
 
-  </section>
+                <a href="PaginaLixo.html" class="btn-topo">
+                    Voltar
+                </a>
 
-  <h3 class="titulo">O que pode ser utilizado?</h3>
+        </div>
 
-  <section class="cards">
+    </nav>
 
-    <div class="card">
-      <div class="emoji">🍌</div>
-      <h3>Casca de frutas<br>e verduras</h3>
-      <p>Virar adubo natural e liberam nutrientes aos poucos</p>
-    </div>
+</header>
 
-    <div class="card">
-      <div class="emoji">☕</div>
-      <h3>Borra de café</h3>
-      <p>Afasta pragas e melhora a qualidade do solo</p>
-    </div>
+    <main class="pagina">
 
-    <div class="card">
-      <div class="emoji">🥚</div>
-      <h3>Casca de ovo</h3>
-      <p>Rica em cálcio, indicada para tomate e pimenta</p>
-    </div>
+        <!-- HERO -->
+        <section class="hero-pagina">
 
-    <div class="card">
-      <div class="emoji">🍃</div>
-      <h3>Saquinho de chá</h3>
-      <p>Podem ser usados no solo ou na compostagem</p>
-    </div>
+            <div class="hero-conteudo">
 
-  </section>
+                <div class="hero-icone">
+                    🌱
+                </div>
 
-  <h3 class="titulo">Dicas práticas</h3>
+                <h1>
+                    Dê uma nova vida às
+                    <span>suas plantas.</span>
+                </h1>
 
-  <section class="passos">
+                <p>
+                    Alguns resíduos orgânicos podem ganhar uma nova
+                    utilidade na jardinagem. O reaproveitamento ajuda
+                    a reduzir o descarte e aproxima o cuidado das
+                    plantas de hábitos mais sustentáveis.
+                </p>
 
-    <div>
-      🌱
-      <p><b>Adubo natural</b><br>
-      Misture os resíduos com a terra do vaso</p>
-    </div>
+            </div>
 
-    <div>
-      🌿
-      <p><b>Proteção do solo</b><br>
-      Use cascas e folhas para manter a umidade</p>
-    </div>
+            <div class="hero-forma"></div>
 
-    <div>
-      🪴
-      <p><b>Vasos sustentáveis</b><br>
-      Reutilize potes e garrafas</p>
-    </div>
+        </section>
 
-    <div>
-      🌱
-      <p><b>Plantas mais fortes</b><br>
-      Com mais nutrientes e saúde</p>
-    </div>
 
-  </section>
+        <!-- INTRODUÇÃO -->
+        <section class="introducao">
 
-  <div class="dica">
-    🌿 Dica: Use um minhocomposto para acelerar o processo e obter um adubo ainda mais forte!
-  </div>
+            <span class="etiqueta">
+                Jardinagem
+            </span>
 
-  <nav class="menu">
+            <h2>
+                Ideias para reaproveitar na jardinagem
+            </h2>
 
-   <button onclick="abrir('paginaCompostagem.html')">
-      ♻️<span>Compostagem</span>
-    </button>
+            <p>
+                Descubra algumas formas de aproveitar materiais
+                e resíduos no cuidado com suas plantas.
+            </p>
 
-    <button onclick="abrir('paginaJardinagem.html')">
-      🌱<span>Jardinagem</span>
-    </button>
+        </section>
 
-    <button class="ativo" onclick="abrir('paginaLimpeza.html')">
-      🧴<span>Limpeza natural</span>
-    </button>
 
-    <button onclick="abrir('paginaArtesanato.html')">
-      ✂️<span>Artesanato</span>
-    </button>
+        <!-- CARDS -->
+        <section class="cards-grid">
 
-    <button onclick="abrir('paginaAnimal.html')">
-      🐾<span>Bem-estar animal</span>
-    </button>
 
-  </nav>
+            <!-- CARD 1 -->
+            <article class="card">
 
-</main>
+                <div class="imagem-card">
 
-<script src="/js/reaproveitamento.js"></script>
+                    <img
+                        src="/imagens/borra-cafe.png"
+                        alt="Borra de café">
+
+                </div>
+
+                <h3>
+                    Borra de café
+                </h3>
+
+                <span>
+                    Reutilize como
+                </span>
+
+                <p>
+                    Pode fazer parte de práticas de cuidado
+                    do solo quando usada corretamente.
+                </p>
+
+            </article>
+
+
+            <!-- CARD 2 -->
+            <article class="card">
+
+                <div class="imagem-card">
+
+                    <img
+                        src="/imagens/casca-ovo.png"
+                        alt="Casca de ovo">
+
+                </div>
+
+                <h3>
+                    Casca de ovo
+                </h3>
+
+                <span>
+                    Reutilize como
+                </span>
+
+                <p>
+                    Triturada, pode ser incorporada ao solo
+                    como parte de uma rotina de jardinagem.
+                </p>
+
+            </article>
+
+
+            <!-- CARD 3 -->
+            <article class="card">
+
+                <div class="imagem-card">
+
+                    <img
+                        src="/imagens/casca-banana.png"
+                        alt="Casca de banana">
+
+                </div>
+
+                <h3>
+                    Casca de banana
+                </h3>
+
+                <span>
+                    Reutilize como
+                </span>
+
+                <p>
+                    Pode ser direcionada à compostagem e
+                    depois contribuir para o preparo de composto.
+                </p>
+
+            </article>
+
+
+            <!-- CARD 4 -->
+            <article class="card">
+
+                <div class="imagem-card">
+
+                    <img
+                        src="/imagens/folhas-secas.png"
+                        alt="Folhas secas">
+
+                </div>
+
+                <h3>
+                    Folhas secas
+                </h3>
+
+                <span>
+                    Reutilize como
+                </span>
+
+                <p>
+                    Podem ser aproveitadas como matéria orgânica
+                    e cobertura do solo.
+                </p>
+
+            </article>
+
+
+            <!-- CARD 5 -->
+            <article class="card">
+
+                <div class="imagem-card">
+
+                    <img
+                        src="/imagens/restos-vegetais.png"
+                        alt="Restos vegetais">
+
+                </div>
+
+                <h3>
+                    Restos vegetais
+                </h3>
+
+                <span>
+                    Reutilize como
+                </span>
+
+                <p>
+                    Partes vegetais podem retornar ao ciclo
+                    por meio da compostagem.
+                </p>
+
+            </article>
+
+
+            <!-- CARD 6 -->
+            <article class="card">
+
+                <div class="imagem-card">
+
+                    <img
+                        src="/imagens/composto-organico.png"
+                        alt="Composto orgânico">
+
+                </div>
+
+                <h3>
+                    Composto orgânico
+                </h3>
+
+                <span>
+                    Reutilize como
+                </span>
+
+                <p>
+                    O material produzido pela compostagem
+                    pode ser usado no cuidado do jardim.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- PASSOS -->
+        <section class="passos">
+
+            <h2>
+                Como começar
+            </h2>
+
+            <div class="lista-passos">
+
+
+                <div class="passo">
+
+                    <div class="numero">
+                        1
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Separe
+                        </h3>
+
+                        <p>
+                            Escolha resíduos vegetais adequados
+                            para reaproveitamento.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="passo">
+
+                    <div class="numero">
+                        2
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Prepare
+                        </h3>
+
+                        <p>
+                            Direcione os materiais para compostagem
+                            ou uso apropriado.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="passo">
+
+                    <div class="numero">
+                        3
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Cuide
+                        </h3>
+
+                        <p>
+                            Use o material pronto de acordo com
+                            as necessidades das plantas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- BARRA FIXA -->
+
+    <nav class="barra-reaproveitamento">
+
+
+        <a href="paginaCompostagem.html" class="opcao">
+
+            <div class="icone">
+                ♻
+            </div>
+
+            <strong>
+                Compostagem
+            </strong>
+
+            <span>
+                Transforme resíduos
+                em adubo natural.
+            </span>
+
+        </a>
+
+
+        <a href="paginaJardinagem.html" class="opcao">
+
+            <div class="icone">
+                🌱
+            </div>
+
+            <strong>
+                Jardinagem
+            </strong>
+
+            <span>
+                Use cascas e resíduos
+                nas suas plantas.
+            </span>
+
+        </a>
+
+
+        <a href="paginaLimpeza.html" class="opcao">
+
+            <div class="icone">
+                🧽
+            </div>
+
+            <strong>
+                Limpeza natural
+            </strong>
+
+            <span>
+                Faça produtos de
+                limpeza caseiros.
+            </span>
+
+        </a>
+
+
+        <a href="paginaArtesanato.html" class="opcao">
+
+            <div class="icone">
+                ✂
+            </div>
+
+            <strong>
+                Artesanato
+            </strong>
+
+            <span>
+                Dê uma nova vida
+                aos objetos.
+            </span>
+
+        </a>
+
+
+        <a href="paginaAnimais.html" class="opcao">
+
+            <div class="icone">
+                🐾
+            </div>
+
+            <strong>
+                Bem-estar animal
+            </strong>
+
+            <span>
+                Reaproveite de forma
+                segura para os animais.
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <script src="/js/paginaJardinagem.js"></script>
+
 </body>
+
 </html>

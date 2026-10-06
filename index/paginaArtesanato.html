@@ -1,130 +1,449 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Artesanato - Reaproveita</title>
+    <title>Reaproveit.ai - Artesanato</title>
 
-  <link rel="stylesheet" href="/css/reaproveitamento.css">
+    <link rel="stylesheet" href="/css/paginaArtesanato.css">
 
-  <link rel="icon" type="image/png" href="/imagens/favicon_reaproveita_maximo.png">
+    <link rel="icon"
+        type="image/png"
+        href="/imagens/favicon_reaproveita_maximo.png">
 </head>
 
 <body>
 
-<main class="pagina">
+  <header class="header">
 
-  <button class="voltar" onclick="voltar()">← Voltar</button>
+    <a href="paginaInicial.html" class="brand">
+        <img src="/imagens/logoInicio.png" alt="Reaproveit.ai">
+    </a>
 
-  <section class="topo">
+    <nav class="nav">
 
-    <div>
+        <a href="paginaInicial.html">Início</a>
 
-      <h1>Artesanato</h1>
+        <a href="paginaInicial.html#como-funciona">
+            Como funciona
+        </a>
 
-      <h2>Criatividade que reaproveita</h2>
+        <a href="paginaInicial.html#sobre">
+            Sobre nós
+        </a>
 
-      <p>
-        Transforme o que seria lixo em peças únicas e cheias de
-        personalidade. O artesanato com materiais é uma forma
-        de reduzir o desperdício e ainda decorar sua casa!
-      </p>
+        <div class="botoes-lixo">
 
-    </div>
+                <a href="PaginaLixo.html" class="btn-topo">
+                    Voltar
+                </a>
 
-    <div class="imagem">
-      <img src="imagens/artesanato.png" alt="Artesanato">
-    </div>
+        </div>
 
-  </section>
+    </nav>
 
-  <h3 class="titulo">Ideias para começar</h3>
+</header>
 
-  <section class="cards">
+    <main class="pagina">
 
-    <div class="card">
-      <div class="emoji">🍊</div>
-      <h3>Cascas de frutas</h3>
-      <p>Velas e enfeites</p>
-    </div>
+        <!-- HERO -->
+        <section class="hero-pagina">
 
-    <div class="card">
-      <div class="emoji">🫙</div>
-      <h3>Embalagens</h3>
-      <p>Use potes, garrafas e caixas para criar organizadores</p>
-    </div>
+            <div class="hero-conteudo">
 
-    <div class="card">
-      <div class="emoji">📦</div>
-      <h3>Papel e papelão</h3>
-      <p>Faça quadros, cadernos e enfeites</p>
-    </div>
+                <div class="hero-icone">
+                    ✂
+                </div>
 
-    <div class="card">
-      <div class="emoji">🧵</div>
-      <h3>Tecidos</h3>
-      <p>Transforme roupas velhas em bolsas e nécessaires</p>
-    </div>
+                <h1>
+                    Crie, transforme e
+                    <span>reaproveite.</span>
+                </h1>
 
-  </section>
+                <p>
+                    Objetos que seriam descartados podem ganhar
+                    uma nova função por meio da criatividade.
+                    Transforme materiais simples em peças úteis,
+                    decorativas e sustentáveis.
+                </p>
 
-  <h3 class="titulo">Dicas extras</h3>
+            </div>
 
-  <section class="passos">
+            <div class="hero-forma"></div>
 
-    <div>
-      🎨
-      <p><b>Criatividade</b><br>
-      Olhe para o que tem na sua casa e imagine novos usos.</p>
-    </div>
+        </section>
 
-    <div>
-      🌱
-      <p><b>Comece simples</b><br>
-      Escolha um material e faça um projeto simples.</p>
-    </div>
 
-    <div>
-      🗑️
-      <p><b>Compartilhe</b><br>
-      Mostre suas ideias e inspire pessoas.</p>
-    </div>
+        <!-- INTRODUÇÃO -->
+        <section class="introducao">
 
-    <div>
-      🌿
-      <p><b>Reaproveite</b><br>
-      Cada material pode ganhar uma nova história.</p>
-    </div>
+            <span class="etiqueta">
+                Artesanato
+            </span>
 
-  </section>
+            <h2>
+                O que pode virar uma nova criação?
+            </h2>
 
-  <nav class="menu">
+            <p>
+                Explore ideias para transformar materiais que
+                normalmente seriam descartados em novos objetos.
+            </p>
 
-    <button onclick="abrir('paginaCompostagem.html')">
-      ♻️<span>Compostagem</span>
-    </button>
+        </section>
 
-    <button onclick="abrir('paginaJardinagem.html')">
-      🌱<span>Jardinagem</span>
-    </button>
 
-    <button class="ativo" onclick="abrir('paginaLimpeza.html')">
-      🧴<span>Limpeza natural</span>
-    </button>
+        <!-- CARDS -->
+        <section class="cards-grid">
 
-    <button onclick="abrir('paginaArtesanato.html')">
-      ✂️<span>Artesanato</span>
-    </button>
 
-    <button onclick="abrir('paginaAnimal.html')">
-      🐾<span>Bem-estar animal</span>
-    </button>
+            <!-- CARD 1 -->
+            <article class="card">
 
-  </nav>
+                <div class="imagem-card">
 
-</main>
+                    <img
+                        src="/imagens/garrafa-pet.png"
+                        alt="Garrafa PET">
 
-<script src="/js/reaproveitamento.js"></script>
+                </div>
+
+                <h3>
+                    Garrafa PET
+                </h3>
+
+                <span>
+                    Transforme em
+                </span>
+
+                <p>
+                    Pode ser transformada em vasos, organizadores
+                    e diferentes objetos decorativos.
+                </p>
+
+            </article>
+
+
+            <!-- CARD 2 -->
+            <article class="card">
+
+                <div class="imagem-card">
+
+                    <img
+                        src="/imagens/pote-plastico.png"
+                        alt="Pote plástico">
+
+                </div>
+
+                <h3>
+                    Potes plásticos
+                </h3>
+
+                <span>
+                    Transforme em
+                </span>
+
+                <p>
+                    Potes podem ganhar novas funções como
+                    organizadores para pequenos objetos.
+                </p>
+
+            </article>
+
+
+            <!-- CARD 3 -->
+            <article class="card">
+
+                <div class="imagem-card">
+
+                    <img
+                        src="/imagens/papel-papelao.png"
+                        alt="Papel e papelão">
+
+                </div>
+
+                <h3>
+                    Papel e papelão
+                </h3>
+
+                <span>
+                    Transforme em
+                </span>
+
+                <p>
+                    Podem ser usados para criar caixas,
+                    organizadores e peças decorativas.
+                </p>
+
+            </article>
+
+
+            <!-- CARD 4 -->
+            <article class="card">
+
+                <div class="imagem-card">
+
+                    <img
+                        src="/imagens/latas.png"
+                        alt="Latas">
+
+                </div>
+
+                <h3>
+                    Latas
+                </h3>
+
+                <span>
+                    Transforme em
+                </span>
+
+                <p>
+                    Latas podem se tornar vasos, porta-lápis
+                    e organizadores.
+                </p>
+
+            </article>
+
+
+            <!-- CARD 5 -->
+            <article class="card">
+
+                <div class="imagem-card">
+
+                    <img
+                        src="/imagens/potes-vidro.png"
+                        alt="Potes de vidro">
+
+                </div>
+
+                <h3>
+                    Potes de vidro
+                </h3>
+
+                <span>
+                    Transforme em
+                </span>
+
+                <p>
+                    Podem ganhar novas funções como recipientes,
+                    vasos e objetos decorativos.
+                </p>
+
+            </article>
+
+
+            <!-- CARD 6 -->
+            <article class="card">
+
+                <div class="imagem-card">
+
+                    <img
+                        src="/imagens/tecidos.png"
+                        alt="Tecidos">
+
+                </div>
+
+                <h3>
+                    Tecidos
+                </h3>
+
+                <span>
+                    Transforme em
+                </span>
+
+                <p>
+                    Retalhos podem ser usados em bolsas,
+                    enfeites, capas e outras criações.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- PASSOS -->
+        <section class="passos">
+
+            <h2>
+                Como começar
+            </h2>
+
+            <div class="lista-passos">
+
+
+                <div class="passo">
+
+                    <div class="numero">
+                        1
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Escolha
+                        </h3>
+
+                        <p>
+                            Separe materiais que ainda podem
+                            receber uma nova utilidade.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="passo">
+
+                    <div class="numero">
+                        2
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Crie
+                        </h3>
+
+                        <p>
+                            Pense em uma nova função para
+                            o material escolhido.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="passo">
+
+                    <div class="numero">
+                        3
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Transforme
+                        </h3>
+
+                        <p>
+                            Coloque sua criatividade em prática
+                            e dê uma nova vida ao objeto.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- BARRA FIXA -->
+
+    <nav class="barra-reaproveitamento">
+
+
+        <a href="paginaCompostagem.html" class="opcao">
+
+            <div class="icone">
+                ♻
+            </div>
+
+            <strong>
+                Compostagem
+            </strong>
+
+            <span>
+                Transforme resíduos
+                em adubo natural.
+            </span>
+
+        </a>
+
+
+        <a href="paginaJardinagem.html" class="opcao">
+
+            <div class="icone">
+                🌱
+            </div>
+
+            <strong>
+                Jardinagem
+            </strong>
+
+            <span>
+                Use cascas e resíduos
+                nas suas plantas.
+            </span>
+
+        </a>
+
+
+        <a href="paginaLimpeza.html" class="opcao">
+
+            <div class="icone">
+                🧽
+            </div>
+
+            <strong>
+                Limpeza natural
+            </strong>
+
+            <span>
+                Faça produtos de
+                limpeza caseiros.
+            </span>
+
+        </a>
+
+
+        <a href="paginaArtesanato.html" class="opcao">
+
+            <div class="icone">
+                ✂
+            </div>
+
+            <strong>
+                Artesanato
+            </strong>
+
+            <span>
+                Dê uma nova vida
+                aos objetos.
+            </span>
+
+        </a>
+
+
+        <a href="paginaAnimais.html" class="opcao">
+
+            <div class="icone">
+                🐾
+            </div>
+
+            <strong>
+                Bem-estar animal
+            </strong>
+
+            <span>
+                Reaproveite de forma
+                segura para os animais.
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <script src="/js/paginaArtesanato.js"></script>
+
 </body>
+
 </html>
