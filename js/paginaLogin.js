@@ -1,19 +1,48 @@
-// ============================================
-// ELEMENTOS DO LOGIN
-// ============================================
+
+ // ============================================
+ // ELEMENTOS DO LOGIN
+ // ============================================
 
 const loginForm = document.getElementById("loginForm");
 
 const emailInput = document.getElementById("email");
 
-const passwordInput =
-    document.getElementById("password");
+const passwordInput = document.getElementById("password");
 
-const message =
-    document.getElementById("message");
+const message = document.getElementById("message");
 
-const remember =
-    document.getElementById("remember");
+const remember = document.getElementById("remember");
+
+
+// ============================================
+// MOSTRAR / ESCONDER SENHA
+// ============================================
+
+const togglePassword = document.getElementById("togglePassword");
+
+const passwordIcon = togglePassword.querySelector("i");
+
+togglePassword.addEventListener("click", () => {
+
+    const mostrarSenha = passwordInput.type === "password";
+
+    passwordInput.type = mostrarSenha ? "text" : "password";
+
+    passwordIcon.classList.toggle("fa-eye", mostrarSenha);
+
+    passwordIcon.classList.toggle("fa-eye-slash", !mostrarSenha);
+
+    togglePassword.setAttribute(
+        "aria-label",
+        mostrarSenha ? "Ocultar senha" : "Mostrar senha"
+    );
+
+    togglePassword.setAttribute(
+        "aria-pressed",
+        String(mostrarSenha)
+    );
+
+});
 
 
 // ============================================
@@ -51,31 +80,9 @@ function showMessage(text, success = false) {
 
     message.textContent = text;
 
-    message.style.color =
-        success ? "#465c1d" : "#9a3535";
+    message.style.color = success ? "#465c1d" : "#9a3535";
 
 }
-
-
-// ============================================
-// MOSTRAR / ESCONDER SENHA
-// ============================================
-
-document
-    .getElementById("togglePassword")
-    .addEventListener("click", () => {
-
-        if (passwordInput.type === "password") {
-
-            passwordInput.type = "text";
-
-        } else {
-
-            passwordInput.type = "password";
-
-        }
-
-    });
 
 
 // ============================================
@@ -129,11 +136,9 @@ loginForm.addEventListener("submit", (event) => {
     // PEGAR VALORES
     // ========================================
 
-    const email =
-        emailInput.value.trim().toLowerCase();
+    const email = emailInput.value.trim().toLowerCase();
 
-    const password =
-        passwordInput.value;
+    const password = passwordInput.value;
 
 
     // ========================================
@@ -160,9 +165,7 @@ loginForm.addEventListener("submit", (event) => {
 
     if (!account) {
 
-        showMessage(
-            "E-mail ou senha incorretos."
-        );
+        showMessage("E-mail ou senha incorretos.");
 
         return;
     }
@@ -176,8 +179,7 @@ loginForm.addEventListener("submit", (event) => {
 
         email: account.email,
 
-        loggedAt:
-            new Date().toISOString()
+        loggedAt: new Date().toISOString()
 
     };
 
@@ -186,7 +188,7 @@ loginForm.addEventListener("submit", (event) => {
     // LEMBRAR LOGIN
     // ========================================
 
-    if (remember.checked) {
+    if (remember && remember.checked) {
 
         localStorage.setItem(
             "reaproveita_session",
@@ -207,10 +209,7 @@ loginForm.addEventListener("submit", (event) => {
     // LOGIN REALIZADO
     // ========================================
 
-    showMessage(
-        "Login realizado! Entrando...",
-        true
-    );
+    showMessage("Login realizado! Entrando...", true);
 
 
     // ========================================
@@ -246,43 +245,29 @@ document
 // ============================================
 
 const savedSession =
-    localStorage.getItem(
-        "reaproveita_session"
-    ) ||
-    sessionStorage.getItem(
-        "reaproveita_session"
-    );
+    localStorage.getItem("reaproveita_session") ||
+    sessionStorage.getItem("reaproveita_session");
 
 
 if (savedSession) {
 
     try {
 
-        const session =
-            JSON.parse(savedSession);
+        const session = JSON.parse(savedSession);
 
+        emailInput.value = session.email || "";
 
-        emailInput.value =
-            session.email || "";
-
-
-        remember.checked =
-            Boolean(
-                localStorage.getItem(
-                    "reaproveita_session"
-                )
+        if (remember) {
+            remember.checked = Boolean(
+                localStorage.getItem("reaproveita_session")
             );
-
+        }
 
     } catch {
 
-        localStorage.removeItem(
-            "reaproveita_session"
-        );
+        localStorage.removeItem("reaproveita_session");
 
-        sessionStorage.removeItem(
-            "reaproveita_session"
-        );
+        sessionStorage.removeItem("reaproveita_session");
 
     }
 

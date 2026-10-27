@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -6,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Reaproveit.ai - Login</title>
+
+    <!-- ÍCONES -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
 
     <link rel="stylesheet" href="/css/paginaLogin.css">
 
@@ -31,9 +38,7 @@
                 >
 
                 <p>
-                    O ecossistema definitivo para
-                    aproveitar melhor os alimentos
-                    e reduzir o desperdício.
+                    Cada novo começo é uma oportunidade de transformar pequenas atitudes em grandes mudanças.
                 </p>
 
             </section>
@@ -52,18 +57,14 @@
 
 
                     <!-- FORMULÁRIO DE LOGIN -->
-
                     <form id="loginForm">
 
                         <!-- E-MAIL -->
-
                         <label for="email">
                             E-mail
                         </label>
 
                         <div class="input-box">
-
-                            <span>✉</span>
 
                             <input
                                 id="email"
@@ -76,14 +77,11 @@
 
 
                         <!-- SENHA -->
-
                         <label for="password">
                             Senha
                         </label>
 
                         <div class="input-box">
-
-                            <span>🔒</span>
 
                             <input
                                 id="password"
@@ -96,30 +94,24 @@
                                 type="button"
                                 id="togglePassword"
                                 class="show-password"
+                                aria-label="Mostrar senha"
+                                aria-pressed="false"
                             >
-                                👁
+                                <i
+                                    class="fa-solid fa-eye-slash"
+                                    aria-hidden="true"
+                                ></i>
                             </button>
 
                         </div>
 
 
                         <!-- OPÇÕES -->
-
                         <div class="options">
 
                             <label class="remember">
-
-                                <input
-                                    type="checkbox"
-                                    id="remember"
-                                >
-
-                                <span>
-                                    Lembra de mim
-                                </span>
-
+                                
                             </label>
-
 
                             <button
                                 type="button"
@@ -133,7 +125,6 @@
 
 
                         <!-- BOTÃO ENTRAR -->
-
                         <button
                             class="enter-button"
                             type="submit"
@@ -143,7 +134,6 @@
 
 
                         <!-- MENSAGEM -->
-
                         <p
                             id="message"
                             class="message"
@@ -153,14 +143,12 @@
 
 
                     <!-- DIVISÓRIA -->
-
                     <div class="divider">
                         <span>ou</span>
                     </div>
 
 
                     <!-- CADASTRO -->
-
                     <p class="signup">
 
                         Ainda não tem uma conta?
@@ -185,7 +173,6 @@
 
 
     <!-- JANELA DE CADASTRO -->
-
     <div
         class="modal hidden"
         id="signupModal"

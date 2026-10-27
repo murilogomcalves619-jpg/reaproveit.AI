@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -9,6 +10,12 @@
 
     <title>Reaproveit.ai - Cadastro</title>
 
+    <!-- BIBLIOTECA DE ÍCONES -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
     <link rel="stylesheet" href="/css/cadrastro.css">
 
     <link
@@ -18,7 +25,6 @@
     >
 
 </head>
-
 
 <body>
 
@@ -57,7 +63,6 @@
 
             <form id="cadastroForm">
 
-
                 <!-- E-MAIL -->
 
                 <label for="email">
@@ -66,32 +71,10 @@
 
                 <div class="input-box">
 
-                    <span>✉</span>
-
                     <input
                         id="email"
                         type="email"
                         placeholder="Digite seu e-mail"
-                        required
-                    >
-
-                </div>
-
-
-                <!-- TELEFONE -->
-
-                <label for="telefone">
-                    Telefone
-                </label>
-
-                <div class="input-box">
-
-                    <span>☎</span>
-
-                    <input
-                        id="telefone"
-                        type="tel"
-                        placeholder="Digite seu telefone"
                         required
                     >
 
@@ -106,8 +89,6 @@
 
                 <div class="input-box">
 
-                    <span>🔒</span>
-
                     <input
                         id="senha"
                         type="password"
@@ -120,8 +101,13 @@
                         type="button"
                         class="show-password"
                         id="mostrarSenha"
+                        aria-label="Mostrar senha"
+                        aria-pressed="false"
                     >
-                        👁
+                        <i
+                            class="fa-solid fa-eye-slash"
+                            aria-hidden="true"
+                        ></i>
                     </button>
 
                 </div>
@@ -135,8 +121,6 @@
 
                 <div class="input-box">
 
-                    <span>🔒</span>
-
                     <input
                         id="confirmarSenha"
                         type="password"
@@ -149,8 +133,13 @@
                         type="button"
                         class="show-password"
                         id="mostrarConfirmarSenha"
+                        aria-label="Mostrar confirmação da senha"
+                        aria-pressed="false"
                     >
-                        👁
+                        <i
+                            class="fa-solid fa-eye-slash"
+                            aria-hidden="true"
+                        ></i>
                     </button>
 
                 </div>
@@ -163,7 +152,6 @@
                     type="submit"
                 >
                     Criar conta
-                    
                 </button>
 
 
@@ -173,7 +161,6 @@
                     id="message"
                     class="message"
                 ></p>
-
 
             </form>
 

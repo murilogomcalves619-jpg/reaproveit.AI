@@ -1,23 +1,17 @@
-// ========================================
-// ELEMENTOS
-// ========================================
+
+ // ========================================
+ // ELEMENTOS
+ // ========================================
 
 const form = document.getElementById("cadastroForm");
 
-const emailInput =
-    document.getElementById("email");
+const emailInput = document.getElementById("email");
 
-const telefoneInput =
-    document.getElementById("telefone");
+const senhaInput = document.getElementById("senha");
 
-const senhaInput =
-    document.getElementById("senha");
+const confirmarSenhaInput = document.getElementById("confirmarSenha");
 
-const confirmarSenhaInput =
-    document.getElementById("confirmarSenha");
-
-const mensagem =
-    document.getElementById("message");
+const mensagem = document.getElementById("message");
 
 
 // ========================================
@@ -25,12 +19,8 @@ const mensagem =
 // ========================================
 
 function mostrarMensagem(texto, sucesso = false) {
-
     mensagem.textContent = texto;
-
-    mensagem.style.color =
-        sucesso ? "#526b26" : "#c45c3c";
-
+    mensagem.style.color = sucesso ? "#526b26" : "#c45c3c";
 }
 
 
@@ -38,25 +28,24 @@ function mostrarMensagem(texto, sucesso = false) {
 // MOSTRAR / ESCONDER SENHA
 // ========================================
 
-const mostrarSenha =
-    document.getElementById("mostrarSenha");
+const mostrarSenha = document.getElementById("mostrarSenha");
 
 mostrarSenha.addEventListener("click", () => {
+    const senhaVisivel = senhaInput.type === "password";
 
-    if (senhaInput.type === "password") {
+    senhaInput.type = senhaVisivel ? "text" : "password";
 
-        senhaInput.type = "text";
+    const icone = mostrarSenha.querySelector("i");
 
-        mostrarSenha.textContent = "🙈";
+    icone.classList.toggle("fa-eye", senhaVisivel);
+    icone.classList.toggle("fa-eye-slash", !senhaVisivel);
 
-    } else {
+    mostrarSenha.setAttribute(
+        "aria-label",
+        senhaVisivel ? "Ocultar senha" : "Mostrar senha"
+    );
 
-        senhaInput.type = "password";
-
-        mostrarSenha.textContent = "👁";
-
-    }
-
+    mostrarSenha.setAttribute("aria-pressed", String(senhaVisivel));
 });
 
 
@@ -68,21 +57,26 @@ const mostrarConfirmarSenha =
     document.getElementById("mostrarConfirmarSenha");
 
 mostrarConfirmarSenha.addEventListener("click", () => {
+    const senhaVisivel = confirmarSenhaInput.type === "password";
 
-    if (confirmarSenhaInput.type === "password") {
+    confirmarSenhaInput.type = senhaVisivel ? "text" : "password";
 
-        confirmarSenhaInput.type = "text";
+    const icone = mostrarConfirmarSenha.querySelector("i");
 
-        mostrarConfirmarSenha.textContent = "🙈";
+    icone.classList.toggle("fa-eye", senhaVisivel);
+    icone.classList.toggle("fa-eye-slash", !senhaVisivel);
 
-    } else {
+    mostrarConfirmarSenha.setAttribute(
+        "aria-label",
+        senhaVisivel
+            ? "Ocultar confirmação da senha"
+            : "Mostrar confirmação da senha"
+    );
 
-        confirmarSenhaInput.type = "password";
-
-        mostrarConfirmarSenha.textContent = "👁";
-
-    }
-
+    mostrarConfirmarSenha.setAttribute(
+        "aria-pressed",
+        String(senhaVisivel)
+    );
 });
 
 
@@ -91,79 +85,45 @@ mostrarConfirmarSenha.addEventListener("click", () => {
 // ========================================
 
 form.addEventListener("submit", async (event) => {
-
     event.preventDefault();
-
 
     // ====================================
     // VERIFICAR CAMPOS VAZIOS
     // ====================================
 
     if (!emailInput.value.trim()) {
-
         emailInput.focus();
-
         emailInput.reportValidity();
-
         return;
-
     }
-
-
-    if (!telefoneInput.value.trim()) {
-
-        telefoneInput.focus();
-
-        telefoneInput.reportValidity();
-
-        return;
-
-    }
-
 
     if (!senhaInput.value.trim()) {
-
         senhaInput.focus();
-
         senhaInput.reportValidity();
-
         return;
-
     }
-
 
     if (!confirmarSenhaInput.value.trim()) {
-
         confirmarSenhaInput.focus();
-
         confirmarSenhaInput.reportValidity();
-
         return;
-
     }
-
 
     // ====================================
     // VERIFICAR E-MAIL
     // ====================================
 
     if (!emailInput.checkValidity()) {
-
         emailInput.focus();
-
         emailInput.reportValidity();
-
         return;
-
     }
-
 
     // ====================================
     // VERIFICAR SENHA
     // ====================================
 
     if (senhaInput.value.length < 6) {
-
         senhaInput.focus();
 
         senhaInput.setCustomValidity(
@@ -171,58 +131,35 @@ form.addEventListener("submit", async (event) => {
         );
 
         senhaInput.reportValidity();
-
         senhaInput.setCustomValidity("");
 
         return;
-
     }
-
 
     // ====================================
     // VERIFICAR SENHAS
     // ====================================
 
-    if (
-        senhaInput.value !==
-        confirmarSenhaInput.value
-    ) {
-
-        mostrarMensagem(
-            "As senhas não são iguais."
-        );
-
+    if (senhaInput.value !== confirmarSenhaInput.value) {
+        mostrarMensagem("As senhas não são iguais.");
         confirmarSenhaInput.focus();
-
         return;
-
     }
-
 
     // ====================================
     // PEGAR DADOS
     // ====================================
 
-    const email =
-        emailInput.value.trim().toLowerCase();
-
-    const telefone =
-        telefoneInput.value.trim();
-
-    const senha =
-        senhaInput.value;
-
+    const email = emailInput.value.trim().toLowerCase();
+    const senha = senhaInput.value;
 
     // ====================================
     // PEGAR CONTAS EXISTENTES
     // ====================================
 
     let contas = JSON.parse(
-        localStorage.getItem(
-            "reaproveita_accounts"
-        ) || "[]"
+        localStorage.getItem("reaproveita_accounts") || "[]"
     );
-
 
     // ====================================
     // VERIFICAR SE E-MAIL JÁ EXISTE
@@ -232,37 +169,22 @@ form.addEventListener("submit", async (event) => {
         conta => conta.email === email
     );
 
-
     if (contaExiste) {
-
-        mostrarMensagem(
-            "Este e-mail já está cadastrado."
-        );
-
+        mostrarMensagem("Este e-mail já está cadastrado.");
         emailInput.focus();
-
         return;
-
     }
-
 
     // ====================================
     // CRIAR NOVA CONTA
     // ====================================
 
     const novaConta = {
-
         email: email,
-
-        telefone: telefone,
-
         password: senha
-
     };
 
-
     contas.push(novaConta);
-
 
     // ====================================
     // SALVAR CONTA
@@ -273,7 +195,6 @@ form.addEventListener("submit", async (event) => {
         JSON.stringify(contas)
     );
 
-
     // ====================================
     // MENSAGEM DE SUCESSO
     // ====================================
@@ -283,16 +204,11 @@ form.addEventListener("submit", async (event) => {
         true
     );
 
-
     // ====================================
     // IR PARA O LOGIN
     // ====================================
 
     setTimeout(() => {
-
-        window.location.href =
-            "paginaLogin.html";
-
+        window.location.href = "paginaLogin.html";
     }, 1000);
-
 });
