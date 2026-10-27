@@ -121,6 +121,9 @@ body {
     color: #596052;
 }
 
+.hero-banner{
+    display: flex;
+}
 
 /* =========================
    FORMA VERDE
@@ -140,6 +143,18 @@ body {
     background: var(--green-soft);
 
     border-radius: 50%;
+
+    z-index: 5;
+}
+
+.hero-img{
+    z-index: 20;
+
+    height: 300px;
+
+    width: 300px;
+
+    margin: 0px 100px 100px 100px;
 }
 
 
